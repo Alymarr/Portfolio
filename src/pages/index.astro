@@ -10,18 +10,22 @@ import navbar from "../components/navbar.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body class="bg-[#1F1F1F] text-gray-50">
+  <body class="bg-[#1F1F1F] text-gray-50 font-mono">
     <nav class="m-5 flex align-center justify-between uppercase ">
-      <p class="text-2xl font-sans-serif font-semibold align-start mx-5 my-2">Alex Marr</p>
+      <svg width="75" height="52" viewBox="0 0 75 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M72.3761 0.130774C73.638 0.516078 74.5 1.6806 74.5 3V49.5H68.5V12.8251L57.4883 29.1758C56.9308 30.0036 55.9981 30.5 55 30.5H40V49.5H34V30.5H20.6089L5.4217 51.2707L0.578304 47.7293L34.5783 1.2293C35.1425 0.457663 36.0407 0.00109483 36.9966 3.1136e-06C37.9525 -0.00108861 38.8517 0.453427 39.4176 1.22377L54.8933 22.2879L69.0117 1.3242C69.7487 0.229842 71.1142 -0.25453 72.3761 0.130774ZM49.0733 24.5L40 12.1502V24.5H49.0733ZM34 24.5V12.1857L24.996 24.5H34Z" fill="white"/>
+        </svg>
+        
+      
       <ul class="flex justify-end">
-        <li class="mx-5 my-2"><a href="/" class="text-2xl font-sans-serif hover:underline ">Home</a></li>
-        <li class="mx-5 my-2"><a href="/about" class="text-2xl font-sans-serif hover:underline">About</a></li>
-        <li class="mx-5 my-2"><a href="/blog" class="text-2xl font-sans-serif hover:underline underline-offset-6">Blog</a></li>
+        <li class="mx-5 my-2"><a href="/" class="text-2xl hover:underline ">Home</a></li>
+        <li class="mx-5 my-2"><a href="/about" class="text-2xl hover:underline">About</a></li>
+        <li class="mx-5 my-2"><a href="/blog" class="text-2xl hover:underline underline-offset-6">Blog</a></li>
       </ul>
     </nav>
     
     <div class="flex justify-center">
-      <h1 class="text-blue justify-center text-2xl font-sans-serif">Hello! Welcome My Astro Site</h1>
+      <h1 class="text-blue justify-center text-2xl ">Hello! Welcome My Astro Site</h1>
       
     </div>
   </body>
