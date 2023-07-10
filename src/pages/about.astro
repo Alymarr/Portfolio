@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Navigation from "../components/Navigation.astro";
 
 const pageTitle = 'About Me';
 
@@ -19,7 +20,7 @@ const textSize = '10vw';
 
 ---
 
-<html lang="en" class="">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -31,6 +32,7 @@ const textSize = '10vw';
 <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
   <body class="font-body">
+    <a id="about"></a>
     <script>
 // function marginLeftFunc(){
 //   let skills= document.getElementsByClassName('skillName');
@@ -45,10 +47,8 @@ const textSize = '10vw';
 // window.addEventListener('load', MarginLeftFunc, false);
 
     </script>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/blog">Blog</a>
-    <h1>{pageTitle}</h1>
+  
+    <!-- <h1>{pageTitle}</h1>
       <h2>Development Philosophy</h2>
       <p>
         Your company's design should match your prospective customers. That's why
@@ -57,9 +57,9 @@ const textSize = '10vw';
       </p>
       <p>I am from {identity.state}</p>
       <p>Some of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</p>
-    <div class=>
+    <div class=> -->
       
-      <p class="proficient text-center">Proficient in</p>
+      <!-- <p class="proficient text-center">Proficient in</p> -->
       <ul class="">
         <!-- {skills.map((skill)=><li class="skillName">{skill}</li>)}-->
         <li class="skillName" id="JS">JS</li>
@@ -88,35 +88,41 @@ const textSize = '10vw';
     font-weight:var(--fontWeight);
     text-transform:var(--textCase);
     font-size: var(--textSize);
-    margin-left: 10px;
+    /* margin-left: 10px; */
+    padding-left: 100%;
+    animation: 9s marquee linear infinite
+  }
+  @keyframes marquee {
+    0% {transform: translate(0);}
+    100%{transform: translate(-100%)}
   }
   #JS{
-    padding-left: ;
+    padding-right:35vw ;
     
   }
   #CSS{
-    padding-left: 7vw;
+    padding-right: 30vw;
     
   }
   #Html{
-    padding-left: 14vw;
+    padding-right: 25vw;
     
   }
  
   #Astro{
-    padding-left: 21vw;
+    padding-right: 20vw;
     
   }
   #React{
-    padding-left: 28vw;
+    padding-right: 15vw;
     
   }
   #Tailwind{
-    padding-left: 35vw;
+    padding-right: 10vw;
     
   }
   #MongoDB{
-    padding-left: 42vw;
+    padding-right: 5vw;
     
   }
 </style>

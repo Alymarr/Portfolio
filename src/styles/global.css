@@ -1,7 +1,9 @@
 html {
   background-image: linear-gradient(#171717, #1F1F1F ) ;
   font-family: sans-serif;
-  color:rgb(249 250 251)
+  color:rgb(249 250 251);
+  height: 100vw;
+  
 }
 
 body {
@@ -17,5 +19,5 @@ body {
 
 h1 {
   margin: 1rem 0;
-  font-size: 2.5rem;
+  font-size: 6rem;
 }
