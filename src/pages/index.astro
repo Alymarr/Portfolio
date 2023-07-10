@@ -1,4 +1,5 @@
 ---
+import navbar from "../components/navbar.astro";
 ---
 
 <html lang="en">
@@ -9,7 +10,19 @@
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body>
-    <h1>Hello! Welcume My Astro Site</h1>
+  <body class="bg-[#1F1F1F] text-gray-50">
+    <nav class="m-5 flex align-center justify-between uppercase ">
+      <p class="text-2xl font-sans-serif font-semibold align-start mx-5 my-2">Alex Marr</p>
+      <ul class="flex justify-end">
+        <li class="mx-5 my-2"><a href="/" class="text-2xl font-sans-serif hover:underline ">Home</a></li>
+        <li class="mx-5 my-2"><a href="/about" class="text-2xl font-sans-serif hover:underline">About</a></li>
+        <li class="mx-5 my-2"><a href="/blog" class="text-2xl font-sans-serif hover:underline underline-offset-6">Blog</a></li>
+      </ul>
+    </nav>
+    
+    <div class="flex justify-center">
+      <h1 class="text-blue justify-center text-2xl font-sans-serif">Hello! Welcome My Astro Site</h1>
+      
+    </div>
   </body>
 </html>
