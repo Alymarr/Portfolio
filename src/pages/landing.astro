@@ -1,7 +1,5 @@
 ---
 import '../styles/global.css';
-import Navigation from "../components/Navigation.astro";
-
 const pageTitle = 'About Me';
 
 const identity = {
@@ -32,41 +30,13 @@ const textSize = '10vw';
 <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
   <body class="font-body">
-    <a id="about"></a>
-    <script>
-// function marginLeftFunc(){
-//   let skills= document.getElementsByClassName('skillName');
-//   let i, marginLeft = 70;
+    <a id="home"></a>
 
-//   for(let i = 0; i < skills.length; i ++){
-//  marginLeft += parseInt(window.getComputedStyle(elements[i]).marginLeft, 10) + 70;
-//  skills[i].style.marginLeft = marginLeft + 'px';
-// //  marginSkills = `${i.toString()}rem`;
-// }
-// }
-// window.addEventListener('load', MarginLeftFunc, false);
-
-    </script>
-  
-    <!-- <h1>{pageTitle}</h1>
-      <h2>Development Philosophy</h2>
-      <p>
-        Your company's design should match your prospective customers. That's why
-        you as my customer are an integral part of the design process when
-        designing your website.
-      </p>
-      <p>I am from {identity.state}</p>
-      <p>Some of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</p>
-    <div class=> -->
-      
-      <!-- <p class="proficient text-center">Proficient in</p> -->
-      <ul class="">
-        <!-- {skills.map((skill)=><li class="skillName">{skill}</li>)}-->
+      <ul class="skillContainer min-h-full">
         <li class="skillName" id="JS">JS</li>
         <li class="skillName" id="CSS">CSS</li>
         <li class="skillName" id="Html">Html</li>
-        
-        <li class="skillName" id="Astro">Astro</li>
+        <li ><p class="skillName" id="Astro">Astro</p></li>
         <li class="skillName" id="React">React</li>
         <li class="skillName" id="Tailwind">Tailwind</li>
         <li class="skillName" id="MongoDB">MongoDB</li>
@@ -76,30 +46,27 @@ const textSize = '10vw';
   </body>
 </html>
 <style define:vars={{skillColor, fontWeight, textCase,textSize}}>
-.proficient{
-  color: #CDCDCD;
-  font-weight: bold;
-  font-size: 5vw;
-  position: justify-center
-
+.skillContainer{
+  overflow: hidden;
 }
   .skillName{
     color:var(--skillColor);
     font-weight:var(--fontWeight);
     text-transform:var(--textCase);
     font-size: var(--textSize);
-    /* margin-left: 10px; */
     padding-left: 100%;
-    animation: 9s marquee linear infinite
+    animation: 12s marquee linear infinite;
+    width: 150vw;
   }
-  @keyframes marquee {
+@keyframes marquee {
     0% {transform: translate(0);}
-    100%{transform: translate(-100%)}
+    100%{transform: translate(-150%)}
   }
   #JS{
     padding-right:35vw ;
     
   }
+
   #CSS{
     padding-right: 30vw;
     
@@ -111,6 +78,9 @@ const textSize = '10vw';
  
   #Astro{
     padding-right: 20vw;
+  }
+  .skillName:hover{
+    animation-play-state: paused;
     
   }
   #React{
