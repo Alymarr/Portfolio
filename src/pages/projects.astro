@@ -12,11 +12,32 @@ import Swiper from "../components/Swiper.html";
     
   </head>
   <body>
-    <a id="projects"></a>
-   <h1 class="text-center underline mt-32">Projects</h1>
+    <div id="projects" class="fade-in-up" style="opacity: 0">
+      <p class="text-[10vw]">Projects</p>
+    </div>
    <div class="my-32">
     <Swiper/>
     
    </div>
+   <style>
+       .fade-in-up {
+        transition: opacity 1s ease-in-out;
+        text-align: center;
+        letter-spacing: 0.1em;
+        
+      }
+   </style>
+   <script>
+    document.addEventListener('scroll', function () {
+      var projectsDiv = document.getElementById('projects');
+      var scrollPosition = window.scrollY;
+
+      if (scrollPosition > 200) {
+        projectsDiv.style.opacity = '1';
+      } else {
+        projectsDiv.style.opacity = '0';
+      }
+    });
+  </script>
   </body>
 </html>

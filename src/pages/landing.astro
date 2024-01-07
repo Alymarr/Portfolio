@@ -1,21 +1,6 @@
 ---
-import '../styles/global.css';
-const pageTitle = 'About Me';
-
-const identity = {
-  firstName: 'Alex',
-  state: 'Colorado',
-  focus: 'Front End Web Development',
-  hobbies: ['cycling', 'chest', 'boardgames']
-}
-
-const skills = ['HTML', 'CSS', 'JS', 'REACT', 'ASTRO', 'TAILWIND', 'BOOTSTRAP', 'MONGODB', 'NODEJS']
-
-const skillColor = '#F6CF87';
-const fontWeight =  'bold';
-const textCase = 'Uppercase';
-const textSize = '10vw';
-
+import '../styles/global.css'
+import '../styles/landing.css'
 ---
 
 <html lang="en">
@@ -24,7 +9,8 @@ const textSize = '10vw';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <title>About Me</title>
+    <link rel="stylesheet" href="landing.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -32,67 +18,36 @@ const textSize = '10vw';
   <body class="font-body">
     <a id="home"></a>
 
-      <ul class="skillContainer min-h-full">
-        <li class="skillName" id="JS">JS</li>
-        <li class="skillName" id="CSS">CSS</li>
-        <li class="skillName" id="Html">Html</li>
-        <li ><p class="skillName" id="Astro">Astro</p></li>
-        <li class="skillName" id="React">React</li>
-        <li class="skillName" id="Tailwind">Tailwind</li>
-        <li class="skillName" id="MongoDB">MongoDB</li>
-        </ul> 
+    <div class="landingContainer">
+
+      <div class="fullNameContainer">
+        
+              <div id="firstnameContainer" class="fall-in">
+                <span style="animation-delay: 0.1s;">A</span>
+                <span style="animation-delay: 0.2s;">l</span>
+                <span style="animation-delay: 0.3s;">e</span>
+                <span style="animation-delay: 0.4s;">x</span>
+              </div>
+              <div id="additionalName" class="fall-in" style="animation-delay: 1.5s;">
+                <span style="animation-delay: 1.6s;">M</span>
+                <span style="animation-delay: 1.7s;">a</span>
+                <span style="animation-delay: 1.8s;">r</span>
+                <span style="animation-delay: 1.9s;">r</span>
+              </div>
+      </div>
+           
     </div>
-   
+
+    <span class="bg-white h-[1px] w-[90vw] mx-auto"/>
+          
+          <ul class="skillContainer min-h-full">
+            <li class="skillName" id="JS">JS</li>
+            <li class="skillName" id="CSS">CSS</li>
+            <li class="skillName" id="Html">Html</li>
+            <li ><p class="skillName" id="Astro">Astro</p></li>
+            <li class="skillName" id="React">React</li>
+            <li class="skillName" id="Tailwind">Tailwind</li>
+            <li class="skillName" id="MongoDB">MongoDB</li>
+            </ul> 
   </body>
 </html>
-<style define:vars={{skillColor, fontWeight, textCase,textSize}}>
-.skillContainer{
-  overflow: hidden;
-}
-  .skillName{
-    color:var(--skillColor);
-    font-weight:var(--fontWeight);
-    text-transform:var(--textCase);
-    font-size: var(--textSize);
-    padding-left: 100%;
-    animation: 12s marquee linear infinite;
-    width: 150vw;
-  }
-@keyframes marquee {
-    0% {transform: translate(0);}
-    100%{transform: translate(-150%)}
-  }
-  #JS{
-    padding-right:35vw ;
-    
-  }
-
-  #CSS{
-    padding-right: 30vw;
-    
-  }
-  #Html{
-    padding-right: 25vw;
-    
-  }
- 
-  #Astro{
-    padding-right: 20vw;
-  }
-  .skillName:hover{
-    animation-play-state: paused;
-    
-  }
-  #React{
-    padding-right: 15vw;
-    
-  }
-  #Tailwind{
-    padding-right: 10vw;
-    
-  }
-  #MongoDB{
-    padding-right: 5vw;
-    
-  }
-</style>
