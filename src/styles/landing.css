@@ -5,9 +5,53 @@
   margin-bottom: 4rem;
   display: flex;
   font-style: italic;
-  font-size: 20vw;
+  font-size: 10vw;
+  width: 100%;
 }
-
+.fullContainer {
+}
+.about {
+  height: 30rem;
+  margin-top: 5vh;
+  width: 100vw;
+  margin-bottom: 10vh;
+  background: linear-gradient(
+      135deg,
+      #1f005c,
+      #5b0060,
+      #870160,
+      #ac255e,
+      #ca485c,
+      #e16b5c,
+      #f39060,
+      #ffb56b
+    )
+    fixed;
+  --mask: radial-gradient(55.9px at 50% 75px, #000 99%, #0000 101%)
+      calc(50% - 50px) 0/100px 51% repeat-x,
+    radial-gradient(55.9px at 50% -50px, #0000 99%, #000 101%) 50% 25px/100px
+      calc(51% - 25px) repeat-x,
+    radial-gradient(55.9px at 50% calc(100% - 75px), #000 99%, #0000 101%)
+      calc(50% - 50px) 100%/100px 51% repeat-x,
+    radial-gradient(55.9px at 50% calc(100% + 50px), #0000 99%, #000 101%) 50%
+      calc(100% - 25px) / 100px calc(51% - 25px) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+.aboutContainer {
+  width: 100vw;
+  padding: 6rem;
+  position: absolute;
+  left: -2%; /* Start off-screen on the left */
+  opacity: 0;
+  animation: slideIn 2s ease-out forwards;
+}
+@keyframes slideIn {
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
 .skillContainer {
   overflow: hidden;
 }
@@ -21,12 +65,12 @@
   width: 150vw;
 }
 
-.fullNameContainer {
-}
 #additionalName {
+  margin-inline: 10vw;
+  width: fit-content;
 }
 #firstnameContainer {
-  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 .fall-in span {
@@ -69,7 +113,6 @@
   padding-right: 20vw;
 }
 .skillName:hover {
-  animation-play-state: paused;
 }
 #React {
   padding-right: 15vw;
