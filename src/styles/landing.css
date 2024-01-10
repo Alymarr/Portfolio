@@ -1,14 +1,39 @@
 @media (max-width: 480px) {
+  .rightContainer {
+    opacity: 0;
+  }
+  .fullContainer {
+    background-color: red;
+    max-height: 10vh;
+  }
+  .aboutContainer h1 {
+    font-size: 2rem;
+  }
+  .aboutContainer {
+    padding: 1rem;
+  }
 }
 .landingContainer {
   margin-left: 1rem;
-  margin-bottom: 4rem;
   display: flex;
   font-style: italic;
-  font-size: 10vw;
-  width: 100%;
+  font-size: 12vw;
+  width: 50vw;
+}
+.rightContainer {
+  position: absolute;
+  left: 60%;
 }
 .fullContainer {
+  display: flex;
+  width: 100vw;
+  justify-content: left;
+  margin-top: 5vh;
+  height: 70vh;
+}
+.fullNameContainer {
+  width: fit-content;
+  position: absolute;
 }
 .about {
   height: 30rem;
@@ -66,8 +91,7 @@
 }
 
 #additionalName {
-  margin-inline: 10vw;
-  width: fit-content;
+  margin-left: 6rem;
 }
 #firstnameContainer {
   margin-left: 2rem;
