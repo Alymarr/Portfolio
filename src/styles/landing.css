@@ -3,7 +3,6 @@
     opacity: 0;
   }
   .fullContainer {
-    background-color: red;
     max-height: 10vh;
   }
   .aboutContainer h1 {
@@ -33,18 +32,19 @@
   display: flex;
   width: 100vw;
   justify-content: left;
-  margin-top: 5vh;
-  height: 70vh;
+  margin-top: 5rem;
+  height: 40rem;
 }
 .fullNameContainer {
   width: fit-content;
   position: absolute;
+  margin-bottom: 4rem;
 }
 .about {
   height: 30rem;
-  margin-top: 5vh;
+  margin-top: 5rem;
   width: 100vw;
-  margin-bottom: 10vh;
+  margin-bottom: 10rem;
   background: linear-gradient(
       135deg,
       #1f005c,
