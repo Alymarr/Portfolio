@@ -20,9 +20,14 @@
   font-size: 12vw;
   width: 50vw;
 }
-.rightContainer {
+.portrait {
   position: absolute;
   left: 60%;
+  font-size: 5vw;
+  height: 600px;
+  width: 600px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 .fullContainer {
   display: flex;
